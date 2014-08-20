@@ -3,7 +3,7 @@ recipes:
         - applications::create_var_chef_cache
     mac_os_x:
         - homebrewalt::default
-        - nodejs::default
+        - mbriggs::npm
         - rbenv::user
         - mbriggs::emacs
         - mbriggs::scripts
@@ -42,6 +42,12 @@ recipes:
         - osxdefaults::tap_to_click
         - osxdefaults::turn_off_keyboard_illumination_when_computer_is_not_used_for_5_minutes
 attributes:
+    mbriggs:
+        npm:
+            - bower
+            - jshint
+            - grunt-cli
+            - karma-cli
     rbenv:
         user_installs:
             - user: matt
@@ -69,6 +75,7 @@ attributes:
             - gettext
             - checkstyle
             - pmd
+            - node
             - drip
             - axel
             - cvs
@@ -122,11 +129,5 @@ attributes:
 
         cask_fonts:
             - inconsolata
-    nodejs:
-        apps:
-            - bower
-            - jshint
-            - grunt-cli
-            - karma-cli
     osxdefaults:
         loginmessage: "Choose a job you love, and you will never have to work a day in your life."
