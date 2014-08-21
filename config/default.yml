@@ -4,7 +4,7 @@ recipes:
     mac_os_x:
         - homebrewalt::default
         - mbriggs::npm
-        - rbenv::user
+        - mbriggs::rbenv
         - mbriggs::emacs
         - mbriggs::scripts
         - mbriggs::dotfiles
@@ -48,18 +48,16 @@ attributes:
             - jshint
             - grunt-cli
             - karma-cli
-    rbenv:
-        user_installs:
-            - user: matt
-              rubies: ['2.0.0-p451', '2.1.1']
-              global: '2.1.1'
-              plugins:
-                  - name: 'rbenv-aliases'
-                    git_url: 'https://github.com/tpope/rbenv-aliases.git'
-                  - name: 'rbenv-bundler-ruby-version'
-                    git_url: 'https://github.com/aripollak/rbenv-bundler-ruby-version.git'
-                  - name: 'rbenv-gem-rehash'
-                    git_url: 'https://github.com/sstephenson/rbenv-gem-rehash.git'
+        rbenv:
+            rubies: ['2.0.0-p451', '2.1.1']
+            plugins:
+                - name: 'rbenv-aliases'
+                  git_url: 'https://github.com/tpope/rbenv-aliases.git'
+                - name: 'rbenv-bundler-ruby-version'
+                  git_url: 'https://github.com/aripollak/rbenv-bundler-ruby-version.git'
+                - name: 'rbenv-gem-rehash'
+                  git_url: 'https://github.com/sstephenson/rbenv-gem-rehash.git'
+
     homebrewalt:
         apps:
             - git
