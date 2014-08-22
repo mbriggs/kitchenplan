@@ -70,7 +70,6 @@ attributes:
     apps:
       - git
       - cloc
-      - emacs
       - vim
       - coreutils
       - automake
