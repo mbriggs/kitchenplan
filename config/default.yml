@@ -1,131 +1,138 @@
 recipes:
-    global:
-        - applications::create_var_chef_cache
-    mac_os_x:
-        - homebrewalt::default
-        - mbriggs::npm
-        - mbriggs::rbenv
-        - mbriggs::emacs
-        - mbriggs::scripts
-        - mbriggs::dotfiles
-        - mbriggs::zsh
-        - osxdefaults::add_note_to_login_screen
-        - osxdefaults::avoid_creating_ds_store_files_on_network_volumes
-        - osxdefaults::check_for_software_updates_daily
-        - osxdefaults::disable_auto-correct
-        - osxdefaults::disable_disk_image_verification
-        - osxdefaults::disable_front_row
-        - osxdefaults::disable_gatekeeper
-        - osxdefaults::disable_press-and-hold_for_keys_in_favor_of_key_repeat
-        - osxdefaults::disable_resume_system-wide
-        - osxdefaults::do_not_show_dashboard_as_a_space
-        - osxdefaults::dock_enable_spring_loading_for_all_dock_items
-        - osxdefaults::dock_position_the_dock_on_the_left_side
-        - osxdefaults::dock_set_the_icon_size_of_dock_items_to_36_pixels
-        - osxdefaults::enable_full_keyboard_access_for_all_controls
-        - osxdefaults::enable_safari_debug_menu
-        - osxdefaults::enable_subpixel_font_rendering_on_non-apple_lcds
-        - osxdefaults::expand_save_panel_by_default
-        - osxdefaults::finder_allow_text_selection_in_quick_look
-        - osxdefaults::finder_disable_the_warning_when_changing_a_file_extension
-        - osxdefaults::finder_display_full_path
-        - osxdefaults::finder_new_finder_windows_shows_homefolder
-        - osxdefaults::finder_search_the_current_folder_by_default
-        - osxdefaults::finder_show_file_extensions
-        - osxdefaults::finder_unhide_home
-        - osxdefaults::mail_copy_email_addresses_instead_of_names_in_mail
-        - osxdefaults::make_safari_search_banners_default_to_contains_instead_of_starts_with
-        - osxdefaults::prevent_time_machine_from_prompting_to_use_new_hard_drives_as_backup_volume
-        - osxdefaults::save_screenshots_in_png_format
-        - osxdefaults::save_to_disk_not_to_iCloud_by_default
-        - osxdefaults::set_a_blazingly_fast_keyboard_repeat_rate
-        - osxdefaults::tap_to_click
-        - osxdefaults::turn_off_keyboard_illumination_when_computer_is_not_used_for_5_minutes
+  global:
+    - applications::create_var_chef_cache
+  mac_os_x:
+    - sudoalt::default
+    - homebrewalt::default
+    - mbriggs::npm
+    - mbriggs::rbenv
+    - mbriggs::emacs
+    - mbriggs::scripts
+    - mbriggs::dotfiles
+    - mbriggs::zsh
+    - osxdefaults::add_note_to_loginscreen
+    - osxdefaults::avoid_creating_ds_store_files_on_network_volumes
+    - osxdefaults::check_for_software_updates_daily
+    - osxdefaults::disable_auto-correct
+    - osxdefaults::disable_disk_image_verification
+    - osxdefaults::disable_front_row
+    - osxdefaults::disable_gatekeeper
+    - osxdefaults::disable_press-and-hold_for_keys_in_favor_of_key_repeat
+    - osxdefaults::disable_resume_system-wide
+    - osxdefaults::do_not_show_dashboard_as_a_space
+    - osxdefaults::dock_enable_spring_loading_for_all_dock_items
+    - osxdefaults::dock_position_the_dock_on_the_left_side
+    - osxdefaults::dock_set_the_icon_size_of_dock_items_to_36_pixels
+    - osxdefaults::enable_full_keyboard_access_for_all_controls
+    - osxdefaults::enable_safari_debug_menu
+    - osxdefaults::enable_subpixel_font_rendering_on_non-apple_lcds
+    - osxdefaults::expand_save_panel_by_default
+    - osxdefaults::finder_allow_text_selection_in_quick_look
+    - osxdefaults::finder_disable_the_warning_when_changing_a_file_extension
+    - osxdefaults::finder_display_full_path
+    - osxdefaults::finder_new_finder_windows_shows_homefolder
+    - osxdefaults::finder_search_the_current_folder_by_default
+    - osxdefaults::finder_show_file_extensions
+    - osxdefaults::finder_unhide_home
+    - osxdefaults::mail_copy_email_addresses_instead_of_names_in_mail
+    - osxdefaults::make_safari_search_banners_default_to_contains_instead_of_starts_with
+    - osxdefaults::prevent_time_machine_from_prompting_to_use_new_hard_drives_as_backup_volume
+    - osxdefaults::save_screenshots_in_png_format
+    - osxdefaults::save_to_disk_not_to_iCloud_by_default
+    - osxdefaults::set_a_blazingly_fast_keyboard_repeat_rate
+    - osxdefaults::tap_to_click
+    - osxdefaults::turn_off_keyboard_illumination_when_computer_is_not_used_for_5_minutes
 attributes:
-    mbriggs:
-        npm:
-            - bower
-            - jshint
-            - grunt-cli
-            - karma-cli
-        rbenv:
-            rubies: ['2.0.0-p451', '2.1.1']
-            plugins:
-                - name: 'rbenv-aliases'
-                  git_url: 'https://github.com/tpope/rbenv-aliases.git'
-                - name: 'rbenv-bundler-ruby-version'
-                  git_url: 'https://github.com/aripollak/rbenv-bundler-ruby-version.git'
-                - name: 'rbenv-gem-rehash'
-                  git_url: 'https://github.com/sstephenson/rbenv-gem-rehash.git'
+  authorization:
+    sudo:
+      include_sudoers_d: true
+      passwordless: true
+      users:
+        - matt
+mbriggs:
+  npm:
+    - bower
+    - jshint
+    - grunt-cli
+    - karma-cli
+ rbenv:
+   rubies: ['2.0.0-p451', '2.1.1']
+   plugins:
+     - name: 'rbenv-aliases'
+       gh: 'tpope/rbenv-aliases'
+     - name: 'rbenv-bundler-ruby-version'
+       gh: 'aripollak/rbenv-bundler-ruby-version'
+     - name: 'rbenv-gem-rehash'
+       gh: 'sstephenson/rbenv-gem-rehash'
 
-    homebrewalt:
-        apps:
-            - git
-            - cloc
-            - emacs
-            - vim
-            - coreutils
-            - automake
-            - autoconf
-            - imagemagick
-            - curl
-            - ctags
-            - gettext
-            - checkstyle
-            - pmd
-            - node
-            - drip
-            - axel
-            - cvs
-            - elasticsearch
-            - gnutls
-            - fontconfig
-            - freetype
-            - nginx
-            - maven
-            - leiningen
-            - mono
-            - sqlite
-            - mysql
-            - postgresql
-            - mongodb
-            - rabbitmq
-            - redis
-            - zsh
-            - cairo
-            - cmake
+homebrewalt:
+  apps:
+    - git
+    - cloc
+    - emacs
+    - vim
+    - coreutils
+    - automake
+    - autoconf
+    - imagemagick
+    - curl
+    - ctags
+    - gettext
+    - checkstyle
+    - pmd
+    - node
+    - drip
+    - axel
+    - cvs
+    - elasticsearch
+    - gnutls
+    - fontconfig
+    - freetype
+    - nginx
+    - maven
+    - leiningen
+    - mono
+    - sqlite
+    - mysql
+    - postgresql
+    - mongodb
+    - rabbitmq
+    - redis
+    - zsh
+    - cairo
+    - cmake
 
-        cask_apps:
-            - google-chrome
-            - alfred
-            - iterm2
-            - onepassword
-            - ynab
-            - slack
-            - hipchat
-            - dropbox
-            - rdio
-            - bartender
-            - istat-menus
-            - flux
-            - caffeine
-            - scroll-reverser
-            - omnifocus
-            - utorrent
-            - virtualbox
-            - vlc
-            - tower
-            - steam
-            - sublime-text
-            - skitch
-            - cleanmymac
-            - shimo
-            - xscope
-            - kaleidoscope
-            - java
-            - firefox
+  cask_apps:
+    - google-chrome
+    - alfred
+    - xquartz
+    - iterm2
+    - onepassword
+    - ynab
+    - slack
+    - hipchat
+    - dropbox
+    - rdio
+    - bartender
+    - istat-menus
+    - flux
+    - caffeine
+    - scroll-reverser
+    - omnifocus
+    - utorrent
+    - virtualbox
+    - vlc
+    - tower
+    - steam
+    - sublime-text
+    - skitch
+    - cleanmymac
+    - xscope
+    - kaleidoscope
+    - java
+    - firefox
 
-        cask_fonts:
-            - inconsolata
-    osxdefaults:
-        loginmessage: "Choose a job you love, and you will never have to work a day in your life."
+  cask_fonts:
+    - inconsolata
+osxdefaults:
+  loginmessage: "Choose a job you love, and you will never have to work a day in your life."
