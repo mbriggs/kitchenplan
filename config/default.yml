@@ -42,6 +42,7 @@ recipes:
     - osxdefaults::set_a_blazingly_fast_keyboard_repeat_rate
     - osxdefaults::tap_to_click
     - osxdefaults::turn_off_keyboard_illumination_when_computer_is_not_used_for_5_minutes
+
 attributes:
   authorization:
     sudo:
@@ -49,58 +50,58 @@ attributes:
       passwordless: true
       users:
         - matt
-mbriggs:
-  npm:
-    - bower
-    - jshint
-    - grunt-cli
-    - karma-cli
- rbenv:
-   rubies: ['2.0.0-p451', '2.1.1']
-   plugins:
-     - name: 'rbenv-aliases'
-       gh: 'tpope/rbenv-aliases'
-     - name: 'rbenv-bundler-ruby-version'
-       gh: 'aripollak/rbenv-bundler-ruby-version'
-     - name: 'rbenv-gem-rehash'
-       gh: 'sstephenson/rbenv-gem-rehash'
+  mbriggs:
+    npm:
+      - bower
+      - jshint
+      - grunt-cli
+      - karma-cli
+    rbenv:
+      rubies: ['2.0.0-p451', '2.1.1']
+      plugins:
+        - name: 'rbenv-aliases'
+          gh: 'tpope/rbenv-aliases'
+        - name: 'rbenv-bundler-ruby-version'
+          gh: 'aripollak/rbenv-bundler-ruby-version'
+        - name: 'rbenv-gem-rehash'
+          gh: 'sstephenson/rbenv-gem-rehash'
 
-homebrewalt:
-  apps:
-    - git
-    - cloc
-    - emacs
-    - vim
-    - coreutils
-    - automake
-    - autoconf
-    - imagemagick
-    - curl
-    - ctags
-    - gettext
-    - checkstyle
-    - pmd
-    - node
-    - drip
-    - axel
-    - cvs
-    - elasticsearch
-    - gnutls
-    - fontconfig
-    - freetype
-    - nginx
-    - maven
-    - leiningen
-    - mono
-    - sqlite
-    - mysql
-    - postgresql
-    - mongodb
-    - rabbitmq
-    - redis
-    - zsh
-    - cairo
-    - cmake
+  homebrewalt:
+    apps:
+      - git
+      - cloc
+      - emacs
+      - vim
+      - coreutils
+      - automake
+      - autoconf
+      - imagemagick
+      - curl
+      - ctags
+      - gettext
+      - checkstyle
+      - pmd
+      - node
+      - drip
+      - axel
+      - cvs
+      - elasticsearch
+      - gnutls
+      - fontconfig
+      - freetype
+      - nginx
+      - maven
+      - leiningen
+      - mono
+      - sqlite
+      - mysql
+      - postgresql
+      - mongodb
+      - rabbitmq
+      - redis
+      - zsh
+      - cairo
+      - cmake
 
   cask_apps:
     - google-chrome
