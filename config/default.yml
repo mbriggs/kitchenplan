@@ -102,37 +102,37 @@ attributes:
       - cairo
       - cmake
 
-  cask_apps:
-    - google-chrome
-    - alfred
-    - xquartz
-    - iterm2
-    - onepassword
-    - ynab
-    - slack
-    - hipchat
-    - dropbox
-    - rdio
-    - bartender
-    - istat-menus
-    - flux
-    - caffeine
-    - scroll-reverser
-    - omnifocus
-    - utorrent
-    - virtualbox
-    - vlc
-    - tower
-    - steam
-    - sublime-text
-    - skitch
-    - cleanmymac
-    - xscope
-    - kaleidoscope
-    - java
-    - firefox
+    cask_apps:
+      - google-chrome
+      - alfred
+      - xquartz
+      - iterm2
+      - onepassword
+      - ynab
+      - slack
+      - hipchat
+      - dropbox
+      - rdio
+      - bartender
+      - istat-menus
+      - flux
+      - caffeine
+      - scroll-reverser
+      - omnifocus
+      - utorrent
+      - virtualbox
+      - vlc
+      - tower
+      - steam
+      - sublime-text
+      - skitch
+      - cleanmymac
+      - xscope
+      - kaleidoscope
+      - java
+      - firefox
 
-  cask_fonts:
-    - inconsolata
+    cask_fonts:
+      - inconsolata
 osxdefaults:
   loginmessage: "Choose a job you love, and you will never have to work a day in your life."
