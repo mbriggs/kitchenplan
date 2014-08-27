@@ -6,7 +6,6 @@ recipes:
     - homebrewalt::default
     - mbriggs::npm
     - mbriggs::rbenv
-    - mbriggs::emacs
     - mbriggs::scripts
     - mbriggs::dotfiles
     - mbriggs::zsh
@@ -57,7 +56,7 @@ attributes:
       - grunt-cli
       - karma-cli
     rbenv:
-      rubies: ['2.0.0-p451', '2.1.1']
+      rubies: ['2.1.1']
       plugins:
         - name: 'rbenv-aliases'
           gh: 'tpope/rbenv-aliases'
@@ -70,47 +69,30 @@ attributes:
     apps:
       - git
       - cloc
-      - vim
       - coreutils
       - automake
       - autoconf
-      - imagemagick
       - curl
       - ctags
-      - gettext
       - checkstyle
       - pmd
       - node
       - drip
       - axel
       - cvs
-      - elasticsearch
       - gnutls
-      - fontconfig
-      - freetype
-      - nginx
       - maven
       - leiningen
-      - mono
       - sqlite
-      - mysql
-      - postgresql
-      - mongodb
-      - rabbitmq
-      - redis
       - zsh
-      - cairo
       - cmake
 
     cask_apps:
       - google-chrome
       - alfred
-      - xquartz
+      - vagrant
       - iterm2
-      - onepassword
       - ynab
-      - slack
-      - hipchat
       - dropbox
       - rdio
       - bartender
@@ -134,5 +116,6 @@ attributes:
 
     cask_fonts:
       - inconsolata
-osxdefaults:
-  loginmessage: "Choose a job you love, and you will never have to work a day in your life."
+  osxdefaults:
+    loginmessage: "Choose a job you love, and you will never have to work a day in your life."
+    computername: "ysera"
