@@ -9,6 +9,7 @@ recipes:
     - mbriggs::scripts
     - mbriggs::dotfiles
     - mbriggs::zsh
+    - mbriggs::vagrant
     - osxdefaults::add_note_to_loginscreen
     - osxdefaults::avoid_creating_ds_store_files_on_network_volumes
     - osxdefaults::check_for_software_updates_daily
@@ -50,6 +51,9 @@ attributes:
       users:
         - matt
   mbriggs:
+    user: 'matt'
+    vagrant:
+      plugins: ['vagrant-omnibus', 'vagrant-librarian-chef', 'vagrant-berkshelf']
     npm:
       - bower
       - jshint
@@ -89,6 +93,7 @@ attributes:
 
     cask_apps:
       - google-chrome
+      - brewdk
       - alfred
       - vagrant
       - iterm2
