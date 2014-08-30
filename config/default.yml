@@ -52,6 +52,7 @@ attributes:
         - matt
   mbriggs:
     user: 'matt'
+    group: 'staff'
     vagrant:
       plugins: ['vagrant-omnibus', 'vagrant-librarian-chef', 'vagrant-berkshelf']
     npm:
@@ -79,6 +80,7 @@ attributes:
       - curl
       - ctags
       - checkstyle
+      - autojump
       - pmd
       - node
       - drip
